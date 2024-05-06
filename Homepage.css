@@ -1,0 +1,837 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { overflow-x: hidden;}
+img{user-select: none;}
+body { overflow-x: hidden; position: relative;font-family: 'Montserrat', sans-serif;height: 100svh;}
+a{display: inline-block;}
+.heading-style-2{color: #FFF; font-size: 50px; font-weight: 900; line-height: 50px; margin-bottom: 40px;}
+p{color: #FFF; font-family: Montserrat; font-size: 18px; font-style: normal; font-weight: 400; line-height: 35px;margin-bottom: 28px;}
+
+/* Global coloring  */
+:root {
+  --yellow: #FFBD13;
+  --blue: #4383FF;
+  --blue-d-1: #3278FF;
+  --light: #F5F5F5;
+  --grey: #AAA;
+  --black: #000000;
+  --white: #FFF;
+  --shadow: 8px 8px 30px rgba(0,0,0,.05);
+  --orange: #F49619;
+  --orange-d-1: #d38117;
+
+}
+
+/* Theme 1: Light */
+:root, :root.light-theme {
+  --primary-bg-color: #ffffff;  /* Light background */
+  --primary-text-color: #000000;  
+  --secondary-bg-color: #f0f0f0;
+  --secondary-text-color: #333333;
+}
+/* Theme 2: Dark */
+:root.dark-theme {
+  --primary-bg-color: #808080;  /* Dark background */
+  --primary-text-color: #ffffff;  
+  --secondary-bg-color: #5F5F5F;
+  --secondary-text-color: #3a3a3a;
+}
+
+/* Base styles for logos ensuring one is always hidden based on theme */
+.logo .logo-light,
+.logo .logo-dark {
+  display: none;
+  margin-right: 1em;
+}
+
+/* Display rules based on theme */
+body:not(.dark-theme) .logo .logo-light {
+  display: block;
+}
+
+body.dark-theme .logo .logo-dark {
+  display: block;
+}
+
+/* Reset the button style so only the icon shows */
+#theme-toggle {
+  background: none;  /* No background color */
+  border: none;      /* No border */
+  cursor: pointer;   /* Pointer cursor for buttons */
+  padding: 0;        /* Remove padding for a tight fit */
+}
+
+/* Adjust the icon size */
+#theme-icon {
+  width: 32px;  /* Adjust to desired icon width */
+  height: 32px; /* Adjust to desired icon height */
+  cursor: pointer; /* Make it clickable */
+  filter: invert(1); /* Initially black */
+  transition: filter 0.3s ease; /* Smooth transition for the color change */
+  border: none;
+  padding: 0;
+  background: none;
+  position: absolute;
+  right: 50px; /* Adjust to your desired distance from the right edge */
+  top: 40px;
+}
+
+/* Invert the icon color to white in dark mode */
+:root.dark-theme #theme-icon {
+  filter: invert(1); /* Switch to white */
+}
+
+
+
+/* Header Styles */
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background: var(--light);
+  padding: 10px 20px;  /* Adjust padding as needed */
+  z-index: 500;
+}
+
+.Dashboards:hover {
+  color: var(--orange);
+}
+
+.ComingSoon:hover {
+  color: var(--orange);
+}
+
+.logo img{
+  margin-right: 1em;
+  width: 400px; 
+  height: 90px;
+}
+
+/* Hide dark logo by default */
+.logo .logo-dark {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 1em;
+  z-index: 501; 
+}
+
+.Dashboards button, .ComingSoon button {
+  background: none; 
+  color: inherit; 
+  border: none; 
+  padding: 0; 
+  font: inherit; 
+  cursor: pointer; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.ComingSoon, .dropdown-content a {
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+  background-color: var(--secondary-bg-color);  /* Ensures background color changes with theme */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.Dashboards{
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+  background-color: var(--secondary-bg-color);  /* Ensures background color changes with theme */
+}
+
+.dropdown-content a:hover {
+  color: var(--orange);
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  background-color: #f1f1f1;
+  display: block;
+}
+
+.ComingSoon a {
+  color: inherit; 
+  text-decoration: none; 
+  display: block; 
+}
+
+
+#theme-toggle {
+  margin-left: auto;  /* Pushes the button to the far right */
+  align-self: center;  /* Ensures it stays centered vertically in the navbar */
+  padding: 6px 12px;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  outline: none;
+}
+
+#theme-toggle:hover {
+  background-color: var(--secondary-text-color);
+  color: var(--primary-bg-color);
+}
+
+
+
+
+
+/* Landing */
+/*responsive*/
+/* Base styles - apply to all devices */
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive tables */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Media queries for different screen sizes */
+@media only screen and (max-width: 768px) {  /* For tablets and below */
+  .navbar {
+      flex-direction: column;
+  }
+  .logo img {
+      width: 200px;  /* Smaller logo on smaller screens */
+  }
+  .dropdown-content {
+      position: static;  /* Dropdowns take full width */
+  }
+}
+
+@media only screen and (max-width: 480px) {  /* For phones */
+  .heading-style-2 {
+      font-size: 24px;
+      line-height: 28px;
+  }
+  .vision .vision-main {
+      flex-direction: column;
+  }
+  .vision .vision-main .image img {
+      width: 100%;  /* Make vision image responsive */
+  }
+}
+
+/* logo */
+.logo a{margin-bottom: 20px;}
+.logo a img{width: 271px;height: auto;}
+.slider-main{min-height: 700px; background: radial-gradient(50% 50% at 50% 50%, #C7F6D0 0%, #7CB686 92.19%); display: flex; justify-content: space-between; align-items: center; height: 100%; overflow: hidden; position: relative; z-index: 1; }
+#backgrounds { position: absolute; width: 100%; height: 100%; top: 0; z-index: -1; }
+.background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease-in-out; }
+.container{position: relative; left: calc(50% - (1140px/2)); width: 50%; padding-block: 100px; max-width: 525px; height: 100%; }
+
+/* content */
+.slider-content-wrap{display: flex; flex-direction: column; justify-content: center;height: 100%;}
+
+/* images */
+.slider-images { 
+  position: relative; 
+  width: 100%; 
+  height: 100%; 
+}
+
+.slider-images > img {    
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(25%, -50%) scale(0.3); /* Adjusted for better centering */
+  transition: all 2s ease-in-out; /* Adjust for smoother transitions */
+  object-fit: cover; 
+  width: auto; /* Adjusted for better responsiveness */
+  max-height: 100%; /* Ensure images do not overflow their container */
+  opacity: 0; /* Start images as invisible */
+}
+
+
+.slider-images > img.active {
+    opacity: 1;   
+    transform: scale(1); 
+    transition:  2s; 
+    filter: blur(0px);
+    left: 0; 
+    top: 50%; 
+    transform: translate(50%, -50%) scale(1);
+    z-index: 1;
+}
+
+.slider-images > img.next, .slider-images > img.previous {
+  opacity: 0.5; /* Partial visibility for transitioning images */
+  filter: blur(10px); /* Slight blur for effect */
+  transform: translate(35%, -50%) scale(0.5); /* Smaller scale than active */
+}
+/*.slider-images > img.previous{ 
+    opacity: 1; 
+    transition:  2s; 
+    filter: blur(25px); 
+    left: 95%; 
+    top: 90%;     
+}
+
+.slider-images > img.next{
+    opacity: 1;   
+    transition:  2s; 
+    filter: blur(35px); 
+    left: 100%; 
+    top: 10%;
+    transform: translate(-80%, -30%) scale(0.3);
+}
+
+.slider-images > img.inactive{
+    opacity: 0;   
+    transition: 2s; 
+    filter: blur(35px); 
+    left: 100%; 
+    top: 100%;
+    transform: translate(10%, 10%) scale(0.3);
+}*/
+
+/* .slider-images { position: relative; width: 50%; height: 100%; top: 0; } */
+
+/* .slider-images > img {    
+    position: absolute; 
+    top: 0%; 
+    left: 100%;
+    filter: blur(25px); 
+    transform: translate(-50%, -50%) scale(0.3); 
+    transition: opacity 3s; 
+    object-fit: cover; 
+    max-width: 593px; 
+    max-height: 779px;
+    height: 100%;
+    min-height: 320px;
+}*/
+
+/* vision */
+.vision{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    margin-bottom: 500px;
+     }
+
+.vision .vision-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.vision .vision-main .image img{
+    width: 800px;
+    position: relative;
+    top: 60px;
+}
+
+.vision .vision-main .vision_text h1 span{
+    color: var(--orange);
+    margin-right: 15px;
+    font-family: mv boli;
+    text-align: justify;  
+}
+
+.vision .vision-main .vision_text p{
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+    margin-right: 100px; 
+    margin-left: 10px;
+}
+
+.vision .vision-main .vision_text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 10px;
+    color: var(--primary-text-color);  /* Ensures text color changes with theme */
+}
+
+/* Responsive Vision Section Adjustments */
+@media only screen and (max-width: 1024px) { /* For tablets */
+  .vision .vision-main {
+      flex-direction: column; /* Stack vertically */
+      align-items: center;
+      gap: 40px; /* Increase spacing between items */
+  }
+  .vision .vision-main .image img {
+      width: 600px; /* Smaller width for tablets */
+      top: 0; /* Adjust vertical alignment */
+  }
+  .vision .vision-main .vision_text h1 {
+      font-size: 45px; /* Smaller font size for titles */
+  }
+  .vision .vision-main .vision_text p {
+      margin-right: 20px; /* Adjust to fit narrower screens */
+  }
+}
+
+@media only screen and (max-width: 768px) { /* For phones */
+  .vision .vision-main .image img {
+      width: 100%; /* Full width for smaller devices */
+      max-width: 400px; /* Optional max-width limit */
+      top: 0; /* Align to the center */
+  }
+  .vision .vision-main .vision_text h1 {
+      font-size: 35px; /* Further reduce title font size */
+  }
+  .vision .vision-main .vision_text p {
+      margin: 0 20px; /* Adjust to fit narrower screens */
+      text-align: center; /* Center the paragraph */
+  }
+}
+
+
+
+
+/* offers */
+.card {
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 5px; /* Smaller margin around each card */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Horizontally centers the cards */
+  align-items: center; /* Vertically centers the cards (if there's enough height) */
+  margin: 10px; /* Adjust the margin as needed */
+  gap: 5px; /* Adjust the gap between cards as needed */
+}
+
+.centered-content {
+  text-align: center; /* This centers the text inside the div */
+  margin-bottom: 20px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+
+.card {
+position: relative; /* Enable relative positioning for child element */
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center; /* Aligns horizontally */
+  align-items: center; /* Aligns vertically */
+}
+
+.card-content {
+  display: flex; /* Enable flexbox for horizontal layout */
+  justify-content: space-between; /* Align items on opposite sides */
+  align-items: center; /* Vertically center elements */
+  padding: 10px; /* Adjust padding as needed */
+  
+  }
+  
+  
+  
+  .card-info {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+  }
+
+  .desitem-font {
+      font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .card p{
+      color: var(--grey);
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  
+    
+    .button-group a {
+      padding: .75rem 1rem;
+      border-radius: .5rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: .875rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+    
+
+    .button-group .checkout {
+      background: var(--orange);
+      color: var(--white);
+    }
+    
+    
+    .button-group .checkout:hover {
+      background: var(--orange-d-1);
+    }
+
+
+
+/* reviews */
+ h2 {
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+  margin-right: 15px;
+  font-size: 55px;
+  position: relative;
+  bottom: 10px;
+  text-align:center;
+  padding-bottom: 30px;
+  margin-top: 90px;
+}
+
+ h2 span{
+  color: var(--orange);
+  margin-right: 15px;
+  font-family: mv boli;
+  width: 650px;
+  text-align: center;
+  line-height: 22px;
+}
+
+/* Carousel styling */
+.carousel {
+  background: var(--white);
+  padding: 2rem;
+  max-width: 576px;
+  width: 100%;
+  border-radius: .75rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  position: relative;
+  margin: auto; 
+}
+
+/*
+.carousel-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+*/ 
+
+.carousel__button--prev, .carousel__button--next {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.carousel__button--prev {
+  left: 10px;
+}
+
+.carousel__button--next {
+  right: 10px;
+}
+
+.carousel__track-container {
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for sliding effect */
+}
+
+.carousel__slide, carousel__slide current-slide {
+  min-width: 100%; /* Each slide is as wide as the carousel container */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem; /* Optional spacing between slides */
+}
+
+.user-info .user-name {
+  color: var(--black); 
+}
+
+.user-info .user-review {
+  color: var(--grey); 
+}
+
+.user-avatar {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  height: 70px;
+  width: 70px;
+}
+
+.user-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.user-name {
+  font-weight: 500;
+  color: var(--grey);
+  margin-bottom: .5rem;
+}
+
+.user-review {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.restaurant_rev{
+  font-size: 1.25rem;
+  color: var(--grey);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0.5px;
+}
+
+.user-rating {
+  font-size: 1.25rem;
+  color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* Footer Styles */
+footer {
+  background: var(--light);
+  font-family: 'Arial', sans-serif;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.navbar, footer{
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
+}
+
+.footer-container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 44px;
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+  background-color: var(--secondary-bg-color);  /* Ensures background color changes with theme */
+}
+
+.app-logo {
+  text-align: center;
+}
+ .app-logo img {
+  margin-right: 1em;
+  width: 400px; 
+  height: 90px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  border-top: 1px solid #444; 
+  padding-top: 20px;
+  margin-top: 20px; 
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+  background-color: var(--secondary-bg-color);  /* Ensures background color changes with theme */
+}
+
+.footer-bottom p{
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+}
+
+.language {
+  margin-right: 24em; 
+  margin-left: 1em;
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+  background-color: var(--secondary-bg-color);  /* Ensures background color changes with theme */
+}
+
+.language, .footer-links {
+  display: flex;
+}
+
+.company, .useful-links {
+  margin-right: 30px;
+}
+
+.footer-container > div, .footer-bottom > div {
+  flex: 1;
+}
+
+.copyright {
+  text-align: right; 
+  flex: 1; 
+  color: var(--primary-text-color);  /* Ensures text color changes with theme */
+  background-color: var(--secondary-bg-color);  /* Ensures background color changes with theme */
+}
+
+
+/* Landing */
+/* Base styles - apply to all devices */
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive tables */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Media queries for different screen sizes */
+@media only screen and (max-width: 768px) {  /* For tablets and below */
+  .navbar {
+    flex-direction: column;
+  }
+  .logo img {
+    width: 200px;  /* Smaller logo on smaller screens */
+  }
+  .dropdown-content {
+    position: static;  /* Dropdowns take full width */
+  }
+}
+
+@media only screen and (max-width: 480px) {  /* For phones */
+  .heading-style-2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .vision .vision-main {
+    flex-direction: column;
+  }
+  .vision .vision-main .image img {
+    width: 100%;  /* Make vision image responsive */
+  }
+}
+
+/* Additional mobile adjustments */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 10px;  /* Reduced padding for smaller screens */
+  }
+  #theme-icon {
+    top: 20px;  /* Adjusted positioning */
+    right: 20px;
+  }
+  .slider-main {
+    flex-direction: column; /* Vertical stacking */
+    padding-block: 50px;
+    min-height: 400px;
+  }
+  .container {
+    width: 90%; /* Reduce container width for smaller screens */
+    max-width: 300px; /* Adjust to make it more compact */
+    padding-block: 30px;
+  }
+  .slider-images > img {
+    transform: translate(-50%, -50%) scale(0.5); /* Smaller scale for smaller screens */
+  }
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 10px; /* Adjust gap between cards */
+  }
+  .carousel {
+    padding: 1rem; /* Reduce padding for carousel */
+    width: 90%; /* Make it smaller */
+    max-width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .footer-sections, .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .language, .company, .useful-links {
+    margin: 0;
+    text-align: left;
+  }
+
+  .app-logo img {
+    width: 80%;
+  }
+
+  footer {
+    padding: 15px 10px;
+  }
+
+  .footer-container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .footer-bottom p {
+    text-align: left;
+    margin: 0;
+  }
+}

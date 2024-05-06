@@ -1,0 +1,211 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Styling for all the elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Global coloring */
+:root {
+  --yellow: #FFBD13;
+  --blue: #4383FF;
+  --blue-d-1: #3278FF;
+  --light: #F5F5F5;
+  --grey: #AAA;
+  --white: #FFF;
+  --shadow: 8px 8px 30px rgba(0,0,0,.05);
+  --orange: #F49619;
+  --orange-d-1: #d38117;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light);
+}
+
+.card {
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 5px; 
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    margin: 10px;
+    gap: 5px; 
+  }
+
+  .modal {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: .75rem;
+    box-shadow: var(--shadow);
+    max-width: 576px;
+    width: 100%;
+}
+  
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.current-offers-title{
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+  
+  
+  .card {
+  position: relative; 
+  }
+
+  
+  .modal-body {
+    margin-top: 10px;
+  }
+  
+  .offer-list {
+    padding: 1rem;
+}
+  
+.offer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+  margin-right: 15px;
+}
+
+.offer-item label {
+  flex-grow: 1;
+}
+  
+  .offer-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  .delete-icon {
+    font-size: 24px;  
+    margin-left: 20px;  
+    margin-top: 20px;  
+    vertical-align: middle;  
+}
+
+  
+  .offer-image {
+    width: 100px; 
+    height: 70px; 
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  
+  .add-offer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .add-offer-button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    cursor: pointer;
+    margin-right: 10px; 
+  }
+  
+  
+  .add-offer span {
+    margin-left: 10px;
+  }
+
+  .add-offer a {
+    text-decoration: none !important;
+    color: inherit;
+  }
+  
+  
+  
+
+
+/* buttons */
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-group a, .button-group button {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-group .Add {
+  background: var(--orange);
+  color: var(--white);
+  border-color: var(--orange);
+}
+
+.button-group .Add:hover {
+  background: var(--orange-d-1);
+  border-color: var(--orange-d-1);
+}
+
+.button-group .cancel {
+  background: var(--white);
+  color: var(--grey);
+  border: 1px solid var(--grey);
+  min-width: 100px;
+}
+
+.button-group .cancel:hover {
+  background: var(--light);
+  border-color: var(--light);
+}
+
+
+  

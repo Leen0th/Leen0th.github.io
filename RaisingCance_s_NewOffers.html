@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact TakeOut</title>
+<link rel="stylesheet" href="Add_NewOffer.css">
+<script src="RaisingCance_Offers.js"></script>
+
+</head>
+<body>
+    <div class="modal">
+      <h2>Add new offer</h2>
+      <form id="newOfferForm" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="offerName">Add offer name:</label>
+          <input type="text" id="offerName" name="offerName" required>
+        </div>
+        <div class="form-group">
+          <label for="offerDescription">Add offer description:</label>
+          <textarea id="offerDescription" name="offerDescription" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <div class="file-upload-wrapper">
+            <input type="file" id="offerPhoto" name="offerPhoto" required>
+            <label for="offerPhoto">Add photo of your offer:</label>
+          </div>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn submit" onclick="submitOffer()">Add</button>
+            <button class="btn cancel" onclick="window.location.href='RaisingCane_s_Owner.html';">Cancel</button>
+        </div>        
+      </form>
+    </div>
+  </body>
+  
+    
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <script src="Cart.js"></script>
+   
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <a href="homepage.html">
+        <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut Logo">
+      </a>
+    </div>
+
+    <div class="dropdown">
+      <div class="Dashboards">
+        <button>Dashboards</button>
+      </div>
+
+      <div class="dropdown-content">
+        <a href="Current_Restaurant.html">User Dashboard</a>
+        <a href="Current_Restaurant.html">Owner Dashboard</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div class="ComingSoon">
+        <a href="Coming_Soon.html"><button>Coming Soon Restaurants</button></a>
+      </div>
+    </div>
+  </div>
+
+  <ul class="breadcrumbs">
+    <li><a href="/">Home</a></li>
+    <li>&gt;</li>
+    <li><a href="Current_Restaurant.html">Current Restaurants</a></li>
+    <li>&gt;</li>
+    <li><a href="RaisingCane_s_User.html">Raising Cance's</a></li>
+    <li>&gt;</li>
+    <li>Cart</li>
+  </ul>
+
+
+
+
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Cart</h2>
+    </div>
+    <br><br>
+    <div class="modal-body">
+      <h3 class="current-items-title"><i class="fas fa-trash-alt"></i>My items</h3>
+
+
+      <div class="cart-item">
+        <i class="fas fa-trash-alt"></i>
+        <div class="item-thumbnail"><img src="https://images.prismic.io/raisingcanes/ZjZiMmJkYjUtZmJkZS00Y2ZiLTkxNDAtMWE3NzIyODFjZmQw_04bf7586-877d-4c5b-b358-b4bac61fb6c1_kidscombo_2022.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&rect=0%2C0%2C2000%2C2000&w=512&h=512" alt="Item Thumbnail"></div>
+        <div class="item-details">
+          <p class="item-name">The Kids Combo</p>
+          <p class="item-price">69 SR</p>
+        </div>
+        <div class="item-counter">
+          <div class="counter">
+            <button class="counter-btn decrease">-</button>
+            <div class="counter-value">2</div>
+            <button class="counter-btn increase">+</button>
+          </div>
+        </div>
+        
+
+      </div>
+
+    </div>
+    <br><br>
+    <h3 class="current-items-title"> Order Summary </h3>
+        <br><br>
+          <div class="detail">
+            <span>Order Total</span>
+            <span>69 SR</span>
+          </div>
+          <div class="detail">
+            <span>Delivery fees</span>
+            <span>25 SR</span>
+          </div>
+          <div class="summary-total">
+            <strong>Total</strong>
+            <strong>94 SR</strong>
+        </div>
+        <br><br>
+
+        <div class="button-group">
+          <button class="checkout" onclick="window.location.href='Evaluation.html';">Go to Checkout</button>
+          <button class="cancel" onclick="window.location.href='RaisingCane_s_Owner.html';">Cancel</button>          
+        </div>
+        
+      </div>
+      
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+<footer>
+    <div class="footer-container">
+      
+      <div class="footer-sections">
+        
+        <div class="app-logo">
+          <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut App Logo">
+        </div>
+        
+      <div class="footer-section">
+        <div class="label">Company</div>
+        <div class="item"><a href="About_Us.html">About us</a></div>
+      </div>
+      
+      <div class="footer-section">
+        <div class="label">Useful links</div>
+        <div class="item"><a href="Contact_Us.html">Contact us</a></div>
+      </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="language">
+          <p>English</p>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; TakeOut 2024</p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </footer>
+   
+
+  </html>

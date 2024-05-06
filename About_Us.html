@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="About_Us.css">
+</head>
+  
+<header>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="homepage.html">
+          <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut Logo">
+        </a>
+      </div>
+  
+      <div class="dropdown">
+        <div class="Dashboards">
+          <button>Dashboards</button>
+        </div>
+  
+        <div class="dropdown-content">
+          <a href="Current_Restaurant_User.html">User Dashboard</a>
+          <a href="Current_Restaurant_Owner.html">Owner Dashboard</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <div class="ComingSoon">
+          <a href="Coming_Soon.html"><button>Coming Soon Restaurants</button></a>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+</header>
+
+<body>
+  <ul class="breadcrumbs">
+    <li><a href="Homepage.html">Home</a></li>
+    <li>&gt;</li>
+    <li>About Us</li>
+  </ul>
+    <main>
+      
+      <div class="container">
+       
+        <section class="about-takeout">
+          
+          <div class="takeout-text">
+          <h2>About <span>TakeOut</span></h2>
+          <p>The first Saudi Food delivery Website in the region! Browse the largest selection of restaurants in your city. The list is updated daily with dozens of internationally established brands and local cuisines restaurants, supermarkets, pharmacies, and flower shops, just pick your favorite and Order Now.</p>
+          </div>
+          
+          <img src="https://cdn.dribbble.com/userupload/13770374/file/original-0d2e4e29e5863e58cf9c2083b72dca74.png?resize=752x" alt="Image describing TakeOut">
+  
+        </section>
+      </div>
+    
+    </main>
+  
+    <script>
+      //theme cotroll
+      document.addEventListener('DOMContentLoaded', function () {
+          const themeIcon = document.getElementById('theme-icon');
+      
+          themeIcon.addEventListener('click', function() {
+              document.documentElement.classList.toggle('dark-theme');
+      
+              if (document.documentElement.classList.contains('dark-theme')) {
+                  themeIcon.src = 'images/moon.png'; // Update to moon icon for dark theme
+                  themeIcon.alt = 'Switch to Light Theme';
+              } else {
+                  themeIcon.src = 'images/sun.png'; // Update to sun icon for light theme
+                  themeIcon.alt = 'Switch to Dark Theme';
+              }
+          });
+      });
+      </script>
+</body>
+    
+  <footer>
+    <div class="footer-container">
+      
+      <div class="footer-sections">
+        
+        <div class="app-logo">
+          <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut App Logo">
+        </div>
+        
+      <div class="footer-section">
+        <div class="label">Company</div>
+        <div class="item"><a href="About_Us.html">About us</a></div>
+      </div>
+      
+      <div class="footer-section">
+        <div class="label">Useful links</div>
+        <div class="item"><a href="Contact_Us.html">Contact us</a></div>
+      </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="language">
+          <p>English</p>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; TakeOut 2024</p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </footer>
+  
+  </html>

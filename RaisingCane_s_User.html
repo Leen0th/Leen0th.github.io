@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Page</title>
+<link rel="stylesheet" href="Restaurant_User.css"> <!-- Link to your external CSS file -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<script src="Current_Restaurant_User.js"></script>
+
+</head>
+<body>
+     
+    <div class="navbar">
+      <div class="logo">
+        <a href="homepage.html">
+          <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut Logo">
+        </a>
+      </div>
+  
+      <div class="dropdown">
+        <div class="Dashboards">
+          <button>Dashboards</button>
+        </div>
+  
+        <div class="dropdown-content">
+          <a href="Current_Restaurant_User.html">User Dashboard</a>
+          <a href="Current_Restaurant_Owner.html">Owner Dashboard</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <div class="ComingSoon">
+          <a href="Coming_Soon.html"><button>Coming Soon Restaurants</button></a>
+        </div>
+      </div>
+
+        <div class="cart-icon">
+          <a href="RaisingCance's_Cart.html">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+  </div>
+
+      <ul class="breadcrumbs">
+        <li><a href="Homepage.html">Home</a></li>
+        <li>&gt;</li>
+        <li><a href="Current_Restaurant_User.html">Current Restaurants</a></li> <!------------------------------------------->
+        <li>&gt;</li>
+        <li>Raising Cane's</li>
+      </ul>
+
+
+      <div class="header">
+        <img src="https://hungerstation.com/_next/image?url=https%3A%2F%2Fimages.deliveryhero.io%2Fimage%2Fhungerstation%2Frestaurant%2Fandroid_cover_photo%2Faae1206e22d386f3e4d033c95d14602c.png&w=1440&q=75" alt="Restaurant background">
+        
+        <div class="box">
+          <div class="RestaurantLogo">
+            <img src="https://images.prismic.io/raisingcanes/93a74859-268e-46ce-aa54-653a804c82cd_raising-canes-web-logo_0825_square.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&rect=0%2C0%2C1000%2C1000&w=256&h=171" alt="Restaurant Logo">
+           </div>
+        
+          <div class="restaurant-info">
+            <div class="restaurant-name"><strong>Raising Cane's</strong></div>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wrapper">
+
+        <nav class="menu-navigation">
+            <ul class="nav-links">
+              <li><a href="#offers">Offers</a></li>
+              <li><a href="#Main-Courses">Main Courses</a></li>
+              <li><a href="#Appetizer">Appetizers</a></li>
+              <li><a href="#drinks">Drinks</a></li>
+
+              <div class="sort-menu">
+    <label for="sortby">Sort by:</label>
+    <select id="sortby" onchange="sortMeals()">
+        <optgroup label="Name">
+            <option value="name-asc">Name (A to Z)</option>
+            <option value="name-desc">Name (Z to A)</option>
+        </optgroup>
+        <optgroup label="Price">
+            <option value="price-asc">Price (Low to High)</option>
+            <option value="price-desc">Price (High to Low)</option>
+        </optgroup>
+    </select>
+</div>           
+          </ul>
+          </nav>
+
+          <div class="offers-section">
+            <h1>Offers</h1>
+
+            <div class="offers-container">
+                
+                <div class="offer-card">
+                    <img src="https://i.postimg.cc/7Lh5BDzR/Screen-Shot-1445-09-18-at-12-51-47-PM.png" alt="Offer Image">
+                </div>
+         
+                <div class="offer-card">
+                    <img src="https://i.postimg.cc/prvgqW7b/Screen-Shot-1445-09-18-at-12-56-47-PM.png" alt="Offer Image">
+                </div>
+            </div>
+        </div>
+
+        <h2>Main Courses</h2>
+
+    <section id="Main-Courses" class="menu-category">
+       
+      <div class="card">
+        <div class="card-image-container">
+          <label>
+            <input type="checkbox" class="add-checkbox" id="katsu-checkbox">
+            <div class="add-checkbox-container"></div>
+          </label>
+      
+        <img src="https://images.prismic.io/raisingcanes/NjcwNWUzYzctNzM5My00MmFkLWI1N2EtM2FiZThiYjdiMDA1_363886a1-6d76-4abd-99eb-9e6609c0c247_box_combo_new.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&rect=0%2C0%2C2000%2C2000&w=512&h=512" alt="the box combo">
+       
+        <div class="dish-name-calories">
+          <div class="dish-name">The Box Combo</div>
+          <div class="calories">1500kcal</div>
+        </div>
+      
+        <div class="description">4 Crispy chicken fingers, crinkle-cut fries, coleslaw, Cane's sauce for dipping, and Texas toast, known for its fresh, quality ingredients and flavorful taste.</div>
+        <div class="price">60 SR</div>
+        <div class="counter">
+          <button class="counter-btn decrease">-</button>
+          <div class="counter-value">0</div>
+          <button class="counter-btn increase">+</button>
+        </div>
+      </div>
+    </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <label>
+            <input type="checkbox" class="add-checkbox" id="katsu-checkbox">
+            <div class="add-checkbox-container"></div>
+          </label>
+
+        <img src="https://images.prismic.io/raisingcanes/NWY1YTA5ZGItMjAzYi00MjI5LTllNzgtOTk5NjJlMWExNzNh_6313f8a3-cb33-4cb4-ade0-636558cc9622_sandwich_combo_new.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&rect=0%2C0%2C2000%2C2000&w=512&h=512" alt="the sandwich combo">
+        <div class="dish-name-calories">
+          <div class="dish-name">The Sandwich Combo</div>
+          <div class="calories">1754kcal</div>
+        </div>
+      
+        <div class="description">3 Crispy chicken fingers, tosted pun, crinkle-cut fries, coleslaw, Cane's sauce for dipping, and Texas toast, known for its fresh, quality ingredients and flavorful taste.</div>
+        <div class="price">49 SR</div>
+        <div class="counter">
+          <button class="counter-btn decrease">-</button>
+          <div class="counter-value">0</div>
+          <button class="counter-btn increase">+</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image-container">
+          <label>
+            <input type="checkbox" class="add-checkbox" id="katsu-checkbox">
+            <div class="add-checkbox-container"></div>
+          </label>
+
+        <img src="https://images.prismic.io/raisingcanes/ZjZiMmJkYjUtZmJkZS00Y2ZiLTkxNDAtMWE3NzIyODFjZmQw_04bf7586-877d-4c5b-b358-b4bac61fb6c1_kidscombo_2022.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&rect=0%2C0%2C2000%2C2000&w=512&h=512" alt="The Kids Combo">
+        <div class="dish-name-calories">
+          <div class="dish-name">The Kids Combo</div>
+          <div class="calories">1954kcal</div>
+        </div>
+      
+        <div class="description">2 Crispy chicken fingers, tosted pun and a drink</div>
+        <div class="price">69 SR</div>
+        <div class="counter">
+          <button class="counter-btn decrease">-</button>
+          <div class="counter-value">0</div>
+          <button class="counter-btn increase">+</button>
+        </div>
+      </div>
+      </div>
+  
+  </section>
+
+  <h2>Appetizers</h2>
+  <section id="Appetizer" class="menu-category">
+
+<div class="card">
+  <div class="card-image-container">
+    <label>
+      <input type="checkbox" class="add-checkbox" id="katsu-checkbox">
+      <div class="add-checkbox-container"></div>
+    </label>
+
+  <img src="https://images.prismic.io/raisingcanes/OTZjNzQ4ZDEtMjcxMC00YWY4LWJiYjAtMDkyYWFhNmE4Y2Rh_e2317bae-0359-4229-9474-f6b2e9183e25_canestailgate-25.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&rect=0%2C0%2C1500%2C1500&w=512&h=512" alt="25 finger tailgate">
+  <div class="dish-name-calories">
+    <div class="dish-name">25-Finger Tailgate</div>
+    <div class="calories">500 kcal</div>
+  </div>
+
+  <div class="description"> includes cane's sauce </div>
+  <div class="price">29 SR</div>
+  <div class="counter">
+    <button class="counter-btn decrease">-</button>
+    <div class="counter-value">0</div>
+    <button class="counter-btn increase">+</button>
+  </div>
+</div>
+</div>
+
+  </section>
+
+
+  <h2>Drinks</h2> 
+  <section id="drinks" class="menu-category">
+  
+<div class="card">
+  <div class="card-image-container">
+    <label>
+      <input type="checkbox" class="add-checkbox" id="katsu-checkbox">
+      <div class="add-checkbox-container"></div>
+    </label>
+
+  <img src="https://i.postimg.cc/HkF5YKCr/Screen-Shot-1445-09-18-at-11-49-39-AM.png" alt="Pepsi">
+  <div class="dish-name-calories">
+    <div class="dish-name">Pepsi</div>
+    <div class="calories">100 kcal</div>
+  </div>
+
+  <div class="description">tangy beverage made by squeezing or pressing the fresh pulp of oranges</div>
+  <div class="price">15 SR</div>
+  <div class="counter">
+    <button class="counter-btn decrease">-</button>
+    <div class="counter-value">0</div>
+    <button class="counter-btn increase">+</button>
+  </div>
+</div>
+</div>
+
+<div class="card">
+  <div class="card-image-container">
+    <label>
+      <input type="checkbox" class="add-checkbox" id="katsu-checkbox">
+      <div class="add-checkbox-container"></div>
+    </label>
+
+  <img src="https://i.postimg.cc/ZnynMYCj/Screen-Shot-1445-09-18-at-11-51-12-AM.png" alt="Seven Up">
+  <div class="dish-name-calories">
+    <div class="dish-name">Seven Up</div>
+    <div class="calories">99 kcal</div>
+  </div>
+
+  <div class="description">juice is a sweet, vibrant drink made from pureed strawberries</div>
+  <div class="price">14 SR</div>
+  <div class="counter">
+    <button class="counter-btn decrease">-</button>
+    <div class="counter-value">0</div>
+    <button class="counter-btn increase">+</button>
+  </div>
+</div>
+</div>
+
+
+  </section>
+  <a href="RaisingCance_s_Cart.html" style="text-decoration: none;">
+    <button class="add-button">+ Add to cart</button>
+  </a>
+
+      </div>
+
+</body>
+
+<footer>
+  <div class="footer-container">
+    
+    <div class="footer-sections">
+      
+      <div class="app-logo">
+        <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut App Logo">
+      </div>
+      
+    <div class="footer-section">
+      <div class="label">Company</div>
+      <div class="item"><a href="About_Us.html">About us</a></div>
+    </div>
+    
+    <div class="footer-section">
+      <div class="label">Useful links</div>
+      <div class="item"><a href="Contact_Us.html">Contact us</a></div>
+    </div>
+      
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="language">
+        <p>English</p>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; TakeOut 2024</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</footer>
+</html>

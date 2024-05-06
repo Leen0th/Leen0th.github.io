@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current restaurants</title>
+    <link rel="stylesheet" href="Current_Restaurant_User.css">
+    <!--<script src="script.js"></script>--> 
+    <script src="theme.js">
+      
+    </script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="homepage.html">
+          <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut Logo">
+        </a>
+      </div>
+  
+      <div class="dropdown">
+        <div class="Dashboards">
+          <button>Dashboards</button>
+        </div>
+  
+        <div class="dropdown-content">
+          <a href="Current_Restaurant_User.html">User Dashboard</a>
+          <a href="Current_Restaurant_Owner.html">Owner Dashboard</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <div class="ComingSoon">
+          <a href="Coming_Soon.html"><button>Coming Soon Restaurants</button></a>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+
+  <ul class="breadcrumbs">
+    <li><a href="Homepage.html">Home</a></li>
+    <li>&gt;</li>
+    <li>Current Restaurants</li>
+  </ul>
+
+  <p id="startWeek"></p>
+  <script>document.addEventListener('DOMContentLoaded', function () {
+    // Function to get the start date of the current week (Sunday)
+    function getStartOfWeek() {
+        var today = new Date();
+        var dayOfWeek = today.getDay();
+        var startDate = new Date(today);
+        startDate.setDate(today.getDate() - dayOfWeek);
+        return startDate;
+    }
+    // Function to format the date as "dd month yyyy"
+    function formatDate(date) {
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+    }
+    // Get the start date of the current week
+    var startOfWeek = getStartOfWeek();
+    // Display the current week's start date on the page
+    var currentDateElement = document.getElementById('startWeek');
+    currentDateElement.textContent = 'This week starts on ' + formatDate(startOfWeek);
+});
+</script>
+
+
+  <h1 style="text-align: left;">Restaurants</h1>
+  <nav class="menu-navigation">
+    <ul class="nav-links">
+      <li><a href="#popular">popular</a></li>
+      <li><a href="#Special for you"> Special for you</a></li>
+    </ul>
+  </nav>
+
+       <div id="popular">
+         <section> popular</section>
+         <div class="card-container">
+
+         <a href="Zafran_User.html" style="text-decoration: none; color: inherit;">
+          <div class="card" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+            <div class="card-content">
+              <img src="https://media-cdn.tripadvisor.com/media/photo-s/18/17/06/54/lrm-export-1051255109116460.jpg" alt="Zafran Indian Bistro">
+              <div class="rating">
+                <span class="rating-star">★</span>
+                <span class="rating-number">4.9</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Zafran Indian Bistro</h4>
+              <span class="type">Asian</span>
+              <p class="description hidden">Delicious Indian food, that will connect you to Indian vibes in just one bite..</p>
+            </div>
+          </div>
+          
+          
+
+      <a href="Starbucks_User.html" style="text-decoration: none; color: inherit;">
+      <div class="card" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+        <div class="card-content">
+          <img src="https://i.postimg.cc/8zgqzBp3/Starbucks.jpg" alt="Starbucks">
+          <div class="rating">
+            <span class="rating-star">★</span>
+            <span class="rating-number">4.5</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <h4>Starbucks</h4>
+          <span class="type">Coffee</span>
+        </div>
+        <p class="description hidden"> its wide range of classic coffees, Frappuccino blended beverages, teas, and more.</p>
+    </div>
+      </a>
+
+
+    <a href="Cinnabon_User.html" style="text-decoration: none; color: inherit;">
+    <div class="card">
+      <div class="card-content">
+        <img src="https://www.dinenaperville.com/images/restaurants/Cinnabon.jpg" alt="Cinnabon">
+        <div class="rating">
+          <span class="rating-star">★</span>
+          <span class="rating-number">4.5</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <h4>Cinnabon</h4>
+        <span class="type">Dessert</span>
+      </div>
+      <p class="description hidden">Exquisite baked goods, distinctive Cinnabons that are in great demand</p>
+  </div>
+    </a>
+
+
+        </div>
+        <div id="Special for you">
+          <section> Special for you</section>
+          <div class="card-container">
+
+          
+          <a href="Wokkong_User.html" style="text-decoration: none; color: inherit;">
+          <div class="card hidden">
+             <div class="card-content">
+               <img src="https://play-lh.googleusercontent.com/USn5E6W6c9LxJ_dgixf0oPpbCHs9w1NvHsIOLJm2_XtS5Mn8zFJ5lQ2zCP86_dlm_Kc=w480-h960-rw" alt="WokKong">
+               <div class="rating">
+                 <span class="rating-star">★</span>
+                 <span class="rating-number">4.8</span>
+               </div>
+             </div>
+             <div class="card-info">
+               <h4>WokKong</h4>
+               <span class="type">Asian</span>
+             </div>
+             <p class="description hidden"> a variety of meats, and seafood cooked with different sauces and spices.</p>
+         </div>
+          </a>
+
+
+        <a href="RaisingCane_s_User.html" style="text-decoration: none; color: inherit;">
+         <div class="card hidden">
+          <div class="card-content">
+            <img src="https://images.prismic.io/raisingcanes/93a74859-268e-46ce-aa54-653a804c82cd_raising-canes-web-logo_0825_square.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&rect=0%2C0%2C1000%2C1000&w=256&h=171" alt="Raising Cane's">
+            <div class="rating">
+              <span class="rating-star">★</span>
+              <span class="rating-number">4.7</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <h4>Raising Cane's</h4>
+            <span class="type">Drinks</span>
+          </div>
+          <p class="description hidden">  chicken fingers and Cane's sauce, which are served in meal kits.
+
+          </p>
+      </div>
+        </a>
+
+
+    <a href="KFC_User.html" style="text-decoration: none; color: inherit;">
+    <div class="card hidden">
+      <div class="card-content">
+        <img src="https://upload.wikimedia.org/wikipedia/ar/b/bf/KFC_logo.svg" alt="KFC">
+        <div class="rating">
+          <span class="rating-star">★</span>
+          <span class="rating-number">4.6</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <h4>KFC</h4>
+        <span class="type">Fast Food </span>
+      </div>
+      <p class="description hidden"> fried chicken, which is seasoned with a secret blend of 11 herbs and spices. </p>
+  </div>
+    </a>
+
+    <button id="ViewMoreBtnS" class="View-more">View More</button>
+
+    <script>
+
+      document.getElementById('ViewMoreBtnS').addEventListener('click', function() {
+        // Toggle visibility of more restaurants
+        var moreRestaurants = document.querySelectorAll('.card.hidden');
+        moreRestaurants.forEach(function(card) {
+          card.classList.remove('hidden');
+        });
+        // Optionally hide the button after expanding
+        this.style.display = 'none';
+      });
+    </script>
+
+    </div>
+    <script src="theme.js"></script>
+</body>
+<footer>
+  <div class="footer-container">
+    
+    <div class="footer-sections">
+      
+      <div class="app-logo">
+        <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut App Logo">
+      </div>
+      
+    <div class="footer-section">
+      <div class="label">Company</div>
+      <div class="item"><a href="About_Us.html">About us</a></div>
+    </div>
+    
+    <div class="footer-section">
+      <div class="label">Useful links</div>
+      <div class="item"><a href="Contact_Us.html">Contact us</a></div>
+    </div>
+      
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="language">
+        <p>English</p>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; TakeOut 2024</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</footer>
+</html>

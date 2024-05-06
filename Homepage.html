@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage</title>
+<link rel="stylesheet" href="Homepage.css">
+<script src="theme.js"></script>
+
+
+<script>
+//theme cotroll
+document.addEventListener('DOMContentLoaded', function () {
+    const themeIcon = document.getElementById('theme-icon');
+
+    themeIcon.addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark-theme');
+
+        if (document.documentElement.classList.contains('dark-theme')) {
+            themeIcon.src = 'images/moon.png'; // Update to moon icon for dark theme
+            themeIcon.alt = 'Switch to Light Theme';
+        } else {
+            themeIcon.src = 'images/sun.png'; // Update to sun icon for light theme
+            themeIcon.alt = 'Switch to Dark Theme';
+        }
+    });
+});
+</script>
+
+</head>
+
+<header>
+    
+  <header>
+
+    <div class="navbar">
+      <div class="logo">
+        <a href="homepage.html">
+            <!-- Light theme logo (default) -->
+            <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut Logo" class="img-responsive logo-light">
+            <!-- Dark theme logo -->
+            <img src="https://i.postimg.cc/wTndwHkM/Take-Out-logo-in-white.png" alt="TakeOut Logo" class="img-responsive logo-dark" style="display:none;">
+        </a>
+    </div>
+  
+      <div class="dropdown">
+        <div class="Dashboards">
+          <button>Dashboards</button>
+        </div>
+  
+        <div class="dropdown-content">
+          <a href="Current_Restaurant_User.html">User Dashboard</a>
+          <a href="Current_Restaurant_Owner.html">Owner Dashboard</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <div class="ComingSoon">
+          <a href="Coming_Soon.html"><button>Coming Soon Restaurants</button></a>
+        </div>
+      </div>
+
+      <img id="theme-icon" src="images/sun.png" alt="Switch to Dark Theme" />
+
+    </div>
+    
+  </header>
+  
+</header>
+  
+<body>
+    <!--Landing-->
+    <section class="slider-main">
+      <div class="container">
+        <div class="slider-content-wrap">
+          <div class="slider-content">
+            <h2 class="heading-style-2">All your favorite restaurants are at your fingertips!</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-images">
+        <img class="slider-image" src="https://freepngimg.com/save/139206-food-plate-top-snack-view/528x525" alt="headphone image" class="img-responsive">
+        <img class="slider-image" src="https://png.pngtree.com/png-clipart/20230812/ourmid/pngtree-big-pizza-top-view-transparent-background-png-image_9128236.png" alt="headphone image" class="img-responsive">
+        <img class="slider-image" src="https://png.pngtree.com/png-vector/20231220/ourmid/pngtree-top-view-pasta-in-tomato-sauce-white-plate-background-png-image_11373865.png" alt="headphone image" class="img-responsive">
+        <img class="slider-image" src="https://64.media.tumblr.com/87dadaab7ecf38d5cea78499249641f0/0f5bdc7f38f0aca6-cb/s500x750/0933611203d8ba02fc1d446be6f86c088e8b3347.png" class="img-responsive">
+      </div>
+
+      <div id="backgrounds">
+        <div class="background" style="background: radial-gradient(50% 50% at 50% 50%, #C7F6D0 0%, #7CB686 92.19%);"></div>
+        <div class="background" style="background: radial-gradient(50% 50% at 50% 50%, #D1E4F6 0%, #5F9CCF 100%);"></div>
+        <div class="background" style="background: radial-gradient(50% 50% at 50% 50%, #FFB7B2 0%, #ED746E 100%);"></div>
+        <div class="background" style="background: radial-gradient(50% 50% at 50% 50%, #D7D7D7 0%, #979797 100%);"></div>
+        <div class="background" style="background: radial-gradient(50% 50% at 50% 50%, #6B6B6B 0%, #292929 100%);"></div>
+      </div>
+
+    </section>
+    
+
+
+    <!--vision-->
+    <div class="vision" id="OURvision">
+        <div class="vision-main">
+  
+          <div class="image">
+            <img src="https://i.postimg.cc/4yTcyYDP/Food-Plate.png" class="img-responsive">
+          </div>
+  
+          <div class="vision_text">
+            <h1>Our <span>Vision</span></h1>
+            <p>
+              "Our vision is to revolutionize the dining experience by seamlessly 
+               connecting food lovers with their favorite cuisines through a swift, 
+               reliable, and user-friendly restaurant delivery platform.We aspire to 
+               become the go-to service for culinary exploration and enjoyment,ensuring 
+               every meal ordered is not just food but an experience delivered to your 
+               doorstep, fostering community and culture through the joy of eating."
+            </p>
+          </div>
+       </div>
+    </div>
+
+
+    <!--offers-->
+    <div>
+        <section>
+            <div class="centered-content">
+              <h2><span>Offers</span>for today</h2>
+              <p>Don't miss these restaurants offering of today!!</p>
+            </div>
+          </section>
+         <div class="card-container">
+         <div class="card">
+            <div class="card-content">
+              <img src="https://pbs.twimg.com/media/FJ9Txk5X0AA9SEd.jpg" alt="cinnabon " class="img-responsive">
+              
+            </div>
+            <div class="card-info">
+              <h4>Cinnabon</h4>
+            </div>
+            <p class=".desitem-font">The box is 99 instead of 150 riyals!!</p>
+            <div class="button-group">
+              <a href="Cinnabon_User.html" type="checkout" class="checkout">Go to Restaurant</a>           
+              </div>
+              
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <img src="https://pbs.twimg.com/media/FvWKGiwXgAAOC2H.jpg" alt="starbucks">
+            
+          </div>
+          <div class="card-info">
+              
+            <h4>Starbucks</h4>
+          </div>
+          <p class=".desitem-font">Buy one and get one for free!!</p>
+          <div class="button-group">
+            <a href="Starbucks_User.html" type="checkout" class="checkout">Go to Restaurant</a>           
+            </div>
+       </div>
+
+
+       
+        
+         <div class="card">
+            <div class="card-content">
+              <img src="https://kfcprodimages-ehcsdud6a5a5eqcm.z01.azurefd.net/cmsimages/kfc/ksa/desktop/imagestemp/128-Combo.png" alt="KFC" class="img-responsive">
+              
+            </div>
+            <div class="card-info">
+              <h4>KFC</h4>
+            </div>
+            <p class=".desitem-font">  Unbox the flavor-packed goodness for only 99 Riyals! </p>
+            <div class="button-group">
+              <a href="KFC_User.html" type="checkout" class="checkout">Go to Restaurant</a>           
+              </div>
+         </div>
+
+
+
+         <div class="card">
+          <div class="card-content">
+            <img src="https://pantimearabia.com/wp-content/uploads/2022/03/Hussainabadi-Gosht-Biryani-UAE-1200x1200-1-591x560.jpg" alt="Zafran Indian Bistro" class="img-responsive">
+            
+          </div>
+          <div class="card-info">
+              
+            <h4>Zafran Indian Bistro</h4>
+          </div>
+          <p class=".desitem-font">Taste the richness of India for only 99 Riyals! </p>
+          <div class="button-group">
+            <a href="Zafran_User.html" type="checkout" class="checkout">Go to Restaurant</a>           
+            </div>
+       </div>
+
+       
+       <div class="card">
+        <div class="card-content">
+          <img src="https://i.postimg.cc/7Lh5BDzR/Screen-Shot-1445-09-18-at-12-51-47-PM.png" alt="Raising Cane's" class="img-responsive">
+          
+        </div>
+        <div class="card-info">
+            
+          <h4>Raising Cane's</h4>
+        </div>
+        <p class=".desitem-font">Take one meal and get the second at half price</p>
+        <div class="button-group">
+          <a href="RaisingCane's_User.html" type="checkout" class="checkout">Go to Restaurant</a>           
+          </div>
+     </div>
+
+         <div class="card">
+            <div class="card-content">
+              <img src="https://i.postimg.cc/bN2f7L1w/Screen-Shot-1445-09-18-at-12-04-02-PM.png" alt="Paul" class="img-responsive">
+              
+            </div>
+            <div class="card-info">
+              <h4>WokKong</h4>
+            </div>
+            <p class=".desitem-font">Slurp up your favorite noodles for just 99 Riyals instead of 150!</p>
+            <div class="button-group">
+              <a href="Wokkong_User.html" type="checkout" class="checkout">Go to Restaurant</a>           
+              </div> 
+            </div>
+
+         </div>
+    </div>
+
+
+
+    <!--reviews-->
+    <h2>Customers <span>Reviews</span></h2>
+    <div class="carousel">
+      <!-- Carousel navigation buttons -->
+      <button class="carousel__button--prev">&#10094;</button>
+      <button class="carousel__button--next">&#10095;</button>
+    
+      <!-- Carousel container -->
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          
+          <!-- First user review -->
+          <li class="carousel__slide current-slide">
+            <img class="user-avatar" src="https://i.postimg.cc/ryDJJ8tN/Leen-Thamer-1-2.png" alt="User Avatar">
+            <div class="user-info">
+              <p class="user-name">Leen</p>
+              <p class="user-review">Cinnabon never disappoints! The warm, gooey cinnamon rolls are always fresh, and the perfect sweetness hits the spot every time. Five stars all the way!</p>
+              <p class="restaurant_rev"><strong>Cinnabon</strong></p>
+              <div class="user-rating">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+            </div>
+          </li>
+          
+          <li class="carousel__slide">
+            <img class="user-avatar" src="images/Aisha.jpg" alt="User Avatar">
+            <div class="user-info">
+              <p class="user-name">Aisha</p>
+              <p class="user-review">WokKong offers a decent selection of Asian dishes with fair flavors. Some items could use a bit more seasoning, but the service is quick and friendly. Overall, a solid 3 stars.</p>
+              <p class="restaurant_rev"><strong>WokKong</strong></p>
+              <div class="user-rating">
+                &#9733;&#9733;&#9733;&#9734;&#9734;
+              </div>
+            </div>
+          </li>
+          
+          <li class="carousel__slide">
+            <img class="user-avatar" src="https://mail.google.com/mail/u/0?ui=2&ik=6ce6725a0d&attid=0.1&permmsgid=msg-f:1798238968723388297&th=18f4a0d08805b789&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ82pCBvxBOi1LELD8lL_0t6OATrKMjKPWbUG6TEhUW0J9UkMJT7cb1yiQCCKh0IZNSA4DAQfFs6EaV2GdLJpY7lSvMcAOT-O6K-n0geO1jktR9Grxd41uNb418&disp=emb&realattid=18f4a0cd238c0cf1aa81" alt="User Avatar">
+            <div class="user-info">
+              <p class="user-name">Luluh</p>
+              <p class="user-review">Raising Cane's was a letdown. The chicken lacked flavor, and the fries were cold. Despite the hype, it didn't meet expectations.</p>
+              <p class="restaurant_rev"><strong>Raising Cane's</strong></p>
+              <div class="user-rating">
+                &#9733;&#9734;&#9734;&#9734;&#9734;
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    // Grabbing required elements
+    const track = document.querySelector('.carousel__track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel__button--next');
+    const prevButton = document.querySelector('.carousel__button--prev');
+
+    // Getting the width of a single slide
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // Arrange the slides next to each other
+    const setSlidePosition = (slide, index) => {
+        slide.style.left = slideWidth * index + 'px';
+    };
+    slides.forEach(setSlidePosition);
+
+    // Move to the targeted slide
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+        currentSlide.classList.remove('current-slide');
+        targetSlide.classList.add('current-slide');
+    };
+
+    // Handling the next button click
+    nextButton.addEventListener('click', () => {
+        const currentSlide = track.querySelector('.current-slide');
+        let nextSlide = currentSlide.nextElementSibling;
+        
+        // Wrap around to the first slide if at the end
+        if (!nextSlide) {
+            nextSlide = slides[0]; // First slide
+        }
+        
+        moveToSlide(track, currentSlide, nextSlide);
+    });
+
+    // Handling the previous button click
+    prevButton.addEventListener('click', () => {
+        const currentSlide = track.querySelector('.current-slide');
+        let prevSlide = currentSlide.previousElementSibling;
+
+        // Wrap around to the last slide if at the beginning
+        if (!prevSlide) {
+            prevSlide = slides[slides.length - 1]; // Last slide
+        }
+
+        moveToSlide(track, currentSlide, prevSlide);
+    });
+});
+
+
+    </script>
+    
+<script>
+  // JavaScript to handle image transitions
+  let current = 0;
+const images = document.querySelectorAll('.slider-image');
+const totalImages = images.length;
+
+function changeImage() {
+    // Reset all images to their base state
+    images.forEach(img => {
+        img.classList.remove('active', 'next', 'previous');
+        img.classList.add('inactive'); // Ensure this class is defined if needed
+    });
+
+    // Active image
+    images[current].classList.add('active');
+    images[current].classList.remove('inactive');
+
+    // Next image (circular queue logic)
+    const nextIndex = (current + 1) % totalImages;
+    images[nextIndex].classList.add('next');
+    images[nextIndex].classList.remove('inactive');
+
+    // Previous image (circular queue logic, handles negative wrap-around)
+    const prevIndex = (current - 1 + totalImages) % totalImages;
+    images[prevIndex].classList.add('previous');
+    images[prevIndex].classList.remove('inactive');
+
+    // Update the index for the next iteration
+    current = nextIndex;
+}
+
+// Initial setup and interval for changing images
+changeImage(); // Initialize first active image without delay
+setInterval(changeImage, 3000); // Continue changing images every 3 seconds
+
+  </script>   
+</body>
+
+<footer>
+    <div class="footer-container">
+      
+      <div class="footer-sections">
+        
+        <div class="app-logo">
+          <img src="https://i.postimg.cc/c4Q6WVqN/removal-ai-7fdeb307-57a5-400b-a423-ae59000a5e2b-img-2881.png" alt="TakeOut App Logo" class="img-responsive">
+        </div>
+        
+        <div class="footer-section">
+          <div class="label">Company</div>
+          <div class="item"><a href="About_Us.html">About us</a></div>
+        </div>
+      
+        <div class="footer-section">
+          <div class="label">Useful links</div>
+          <div class="item"><a href="Contact_Us.html">Contact us</a></div>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="language">
+          <p>English</p>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; TakeOut 2024</p>
+        </div>
+        
+      </div>
+      
+    </div>
+</footer>

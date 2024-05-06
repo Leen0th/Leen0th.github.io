@@ -1,0 +1,639 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Styling for all the elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Global coloring */
+:root {
+  --yellow: #FFBD13;
+  --blue: #4383FF;
+  --blue-d-1: #3278FF;
+  --light: #F5F5F5;
+  --grey: #AAA;
+  --white: #FFF;
+  --shadow: 8px 8px 30px rgba(0,0,0,.05);
+  --orange: #F49619;
+  --orange-d-1: #d38117;
+}
+
+/* Breadcrumbs styling */
+.breadcrumbs {
+    list-style: none;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: .75rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .breadcrumbs li {
+    display: inline;
+    margin-right: 5px;
+    color: var(--grey);
+  }
+  
+  .breadcrumbs a {
+    color: var(--orange);
+    text-decoration: none;
+  }
+  
+  .breadcrumbs a:hover {
+    color: var(--orange-d-1);
+  }
+
+/* header */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: var(--light);
+  padding: 1em;
+  z-index: 500;
+}
+
+.Dashboards:hover {
+  color: var(--orange);
+}
+
+.ComingSoon:hover {
+  color: var(--orange);
+}
+
+.logo img{
+  margin-right: 1em;
+  width: 400px; 
+  height: 90px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 1em;
+  z-index: 501; 
+}
+
+.Dashboards button, .ComingSoon button {
+  background: none; 
+  color: inherit; 
+  border: none; 
+  padding: 0; 
+  font: inherit; 
+  cursor: pointer; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.ComingSoon, .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: var(--orange);
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  background-color: #f1f1f1;
+  display: block;
+}
+
+.ComingSoon a {
+  color: inherit; 
+  text-decoration: none; 
+  display: block; 
+}
+
+.dropdown:hover .dropdown-content {
+  background-color: #f1f1f1;
+  display: block;
+}
+
+
+
+/* Footer Styles */
+footer {
+  background: var(--light);
+  color: #000000
+; /* White text */
+  font-family: 'Arial', sans-serif;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 44px;
+}
+
+.app-logo {
+  text-align: center;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444; 
+  padding-top: 20px;
+  margin-top: 20px; 
+}
+
+.language {
+  margin-right: 24em; 
+  margin-left: 1em;
+}
+
+.language, .footer-links {
+  display: flex;
+}
+
+.company, .useful-links {
+  margin-right: 30px;
+}
+
+.footer-container > div, .footer-bottom > div {
+  flex: 1;
+}
+
+footer p {
+  text-align: center;
+  margin: 0; 
+}
+
+
+
+  /* Navigation menu styling */
+  .menu-navigation {
+    display: flex;
+    justify-content: left;
+    background-color: var(--white);
+    padding-left: 40px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 2px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #000;
+    background-color: #fcecdc;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: #F49619;
+  }
+  
+
+  .container {
+    width: 140vw;
+    flex: 1; 
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    display: block; 
+    width: 100%; 
+    font-size: 30px;
+    font-weight: bold;
+    padding: 50px;
+  
+  }
+  
+  .header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .restaurant-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .main {
+    padding: 30px;
+    flex: 1; 
+  }
+  
+  section{
+    display: block; 
+    width: 100%;
+    font-size: 20px;
+  font-weight: bold;
+  padding: 50px;
+
+  }
+  
+  
+  .restaurant-list {
+    display: block;
+    width: 100%;
+  }
+  
+  .restaurant-item {
+    display: block; 
+    margin-bottom: 20px; 
+  }
+  
+  
+  
+  .filter-btn {
+  width: calc(100% / 5); 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border: none; 
+  background-color: #f0f0f0; 
+  margin: 5px; 
+  cursor: pointer; 
+  }
+  .filter-category {
+  display: flex; 
+  background-color: #f0f0f0; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  font-size: 12px; 
+  margin-right: 10px; 
+  }
+  
+  .card {
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 5px; 
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    margin: 10px;
+    gap: 5px; 
+  }
+  
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  
+  .card {
+  position: relative; 
+  }
+  
+  .card-content {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px; 
+  
+  }
+  
+  
+  
+  .card-info {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+  }
+  
+
+  
+  /* Footer Styles */
+footer {
+  background: var(--light);
+  font-family: 'Arial', sans-serif;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 44px;
+}
+
+.app-logo {
+  text-align: center;
+}
+ .app-logo img {
+  margin-right: 1em;
+  width: 400px; 
+  height: 90px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  border-top: 1px solid #444; 
+  padding-top: 20px;
+  margin-top: 20px; 
+  color: #000000; 
+}
+
+.footer-bottom p{
+  color: #000000
+}
+
+.language {
+  margin-right: 24em; 
+  margin-left: 1em;
+}
+
+.language, .footer-links {
+  display: flex;
+}
+
+.company, .useful-links {
+  margin-right: 30px;
+}
+
+.footer-container > div, .footer-bottom > div {
+  flex: 1;
+}
+
+.copyright {
+  text-align: right; 
+  flex: 1; 
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  .menu-navigation {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .language {
+    margin: 0;
+  }
+
+  .filter-category {
+    font-size: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .main, section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar, .menu-navigation, .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    width: 30%;
+  }
+
+  .filter-btn {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .language, .footer-links {
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  section, .main {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Media Queries for Footer Responsiveness */
+@media (max-width: 768px) {
+  .footer-sections {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 10px;
+    gap: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .language, .company, .useful-links {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-sections, .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .language, .company, .useful-links {
+    margin: 0;
+    text-align: left;
+  }
+
+  .app-logo img {
+    width: 80%;
+  }
+
+  footer {
+    padding: 15px 10px;
+  }
+
+  .footer-container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .footer-bottom p {
+    text-align: left;
+    margin: 0;
+  }
+}
+/* Responsive Media Queries for .navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.5em;
+    gap: 10px; /* Add some space between navbar items */
+  }
+
+  .logo img {
+    width: 60%; /* Reduce the logo size */
+    margin: 0 auto; /* Center the logo */
+  }
+
+  .dropdown {
+    width: 100%; /* Make dropdown menus full-width */
+    text-align: left; /* Align dropdown content to the left */
+  }
+
+  .dropdown-content {
+    min-width: 100%; /* Ensure dropdowns fit the full screen width */
+  }
+
+  .Dashboards, .ComingSoon {
+    width: 100%; /* Make the buttons full-width */
+    text-align: left; /* Align button text to the left */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.5em;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 50%; /* Further reduce the logo size */
+    margin: 0 auto;
+  }
+
+  .dropdown {
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-content {
+    min-width: 100%;
+  }
+
+  .Dashboards, .ComingSoon {
+    width: 100%;
+    text-align: left;
+  }
+}

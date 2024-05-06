@@ -1,0 +1,392 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Styling for all the elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Global coloring  */
+:root {
+  --yellow: #FFBD13;
+  --blue: #4383FF;
+  --blue-d-1: #3278FF;
+  --light: #F5F5F5;
+  --grey: #AAA;
+  --white: #FFF;
+  --shadow: 8px 8px 30px rgba(0,0,0,.05);
+  --orange: #F49619;
+  --orange-d-1: #d38117;
+}
+
+body, html {
+  height: 100%;
+  background: var(--light);
+}
+
+/* header */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: var(--light);
+  padding: 1em;
+  z-index: 500;
+}
+
+.Dashboards:hover {
+  color: var(--orange);
+}
+
+.ComingSoon:hover {
+  color: var(--orange);
+}
+
+.logo img{
+  margin-right: 1em;
+  width: 400px; 
+  height: 90px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 1em;
+  z-index: 501; 
+}
+
+.Dashboards button, .ComingSoon button {
+  background: none; 
+  color: inherit; 
+  border: none; 
+  padding: 0; 
+  font: inherit; 
+  cursor: pointer; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.ComingSoon, .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: var(--orange);
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  background-color: #f1f1f1;
+  display: block;
+}
+
+.ComingSoon a {
+  color: inherit; 
+  text-decoration: none; 
+  display: block; 
+}
+
+.dropdown:hover .dropdown-content {
+  background-color: #f1f1f1;
+  display: block;
+}
+
+
+/* breadcrumbs */
+.breadcrumbs {
+  list-style: none;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: .75rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-right: 5px;
+  color: var(--grey);
+}
+
+.breadcrumbs a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--orange-d-1);
+}
+
+
+
+/* Main Styles */
+main {
+  padding: 1rem;
+}
+
+.container {
+  padding: 2rem;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  border-radius: .75rem;
+}
+
+.about-takeout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+.takeout-text {
+  flex: 1; 
+  padding-right: 2rem; 
+  
+}
+
+.takeout-text h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 50px;
+}
+
+.takeout-text h2 span{
+    color: #F49619;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.takeout-text p {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.about-takeout img {
+  flex-shrink: 0; 
+  max-width: 40%; 
+  height: auto; 
+  margin-left: 2rem; 
+}
+
+/* Footer Styles */
+footer {
+  background: var(--light);
+  font-family: 'Arial', sans-serif;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 44px;
+}
+
+.app-logo {
+  text-align: center;
+}
+ .app-logo img {
+  margin-right: 1em;
+  width: 400px; 
+  height: 90px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  border-top: 1px solid #444; 
+  padding-top: 20px;
+  margin-top: 20px; 
+  color: #000000; 
+}
+
+.footer-bottom p{
+  color: #000000
+}
+
+.language {
+  margin-right: 24em; 
+  margin-left: 1em;
+}
+
+.language, .footer-links {
+  display: flex;
+}
+
+.company, .useful-links {
+  margin-right: 30px;
+}
+
+.footer-container > div, .footer-bottom > div {
+  flex: 1;
+}
+
+.copyright {
+  text-align: right; 
+  flex: 1; 
+}
+
+/* Media Queries for Responsive Design */
+
+/* Screens up to 1024px (Desktops and larger tablets) */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.5em;
+  }
+
+  .logo img, .app-logo img {
+    width: 70%; /* Reduce logo size */
+  }
+
+  .about-takeout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .takeout-text {
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-takeout img {
+    max-width: 50%;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .company, .useful-links {
+    margin-right: 15px;
+  }
+
+  .language, .footer-links {
+    justify-content: space-around;
+  }
+}
+
+/* Screens up to 768px (Tablets) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.5em;
+  }
+
+  .logo img, .app-logo img {
+    width: 60%; /* Adjust logo size */
+  }
+
+  .about-takeout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .takeout-text {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .about-takeout img {
+    max-width: 60%;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .language, .footer-links {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .company, .useful-links {
+    margin-right: 0;
+  }
+}
+
+/* Screens up to 480px (Mobile Devices) */
+@media (max-width: 480px) {
+  .navbar, .footer-sections {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.25em;
+  }
+
+  .logo img, .app-logo img {
+    width: 40%; /* Further reduce logo size */
+  }
+
+  .about-takeout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .takeout-text {
+    padding-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-takeout img {
+    max-width: 80%;
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .language, .footer-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .company, .useful-links {
+    margin-right: 0;
+  }
+
+  .footer-container {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+	<link rel="stylesheet" href="Evaluation.css">
+
+	<script src="Evaluation.js"></script>
+
+	<title>Form Reviews</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<h3>Leave a review</h3>
+
+		<form>
+          
+          <select id="restaurantList" name="restaurant" required>
+             <option value="">Choose a restaurant to rate</option>
+             <option value="restaurant1">Master Chef</option>
+             <option value="restaurant2">The Sizzling Griddle</option>
+             <option value="restaurant3">Moonlit Café</option>
+          </select>
+          
+            <p class="rating-text">Click the stars to rate</p>
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+          
+            <p class="opinion-text">Tell us what do you think!</p>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Review here..."></textarea>
+          
+			<div class="btn-group">
+				<a href="Homepage.html" type="submit" class="btn submit">Send</a>
+				<a href="Homepage.html" type="back" class="btn back">Back</a>
+			</div>
+          
+		</form>
+	</div>
+</body>
+
+</html>
